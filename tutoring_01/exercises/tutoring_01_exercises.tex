@@ -1,0 +1,94 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+
+\newcommand*\xor{\oplus}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Tutorato 1}
+\chead{Architetture degli Elaboratori e Sistemi Operativi}
+\rhead{\today}
+\cfoot{\thepage}
+
+\begin{document}
+
+\section*{Binario, altre basi e rappresentazioni}
+\subsection*{Esercizio 1}
+Si convertano i seguenti numeri dalla base 2 alla base 10.
+\begin{itemize}
+\item ${101110}_2$
+\item ${100001}_2$
+\item ${110111101}_2$
+\end{itemize}
+
+\subsection*{Esercizio 2}
+Si convertano i seguenti numeri dalla base 8 alla base 10.
+\begin{itemize}
+\item ${1670}_8$
+\item ${1043}_8$
+\item ${2598}_8$
+\end{itemize}
+
+\subsection*{Esercizio 3}
+Si convertano i seguenti numeri dalla base 16 alle base 10.
+\begin{itemize}
+\item ${11F}_{16}$
+\item ${4CD}_{16}$
+\item ${96FA3}_{16}$
+\end{itemize}
+
+\subsection*{Esercizio 4}
+Si sommino le seguenti coppie di numeri binari; dopo aver ottenuto il risultato in base 2, verificarlo passando alla base 10.
+\begin{itemize}
+\item ${10001}_2 + {1110}_2$
+\item ${1001101}_2 + {111}_2$
+\end{itemize}
+
+\subsection*{Esercizio 5}
+Si convertano i seguenti numeri binari espressi con complemento a 2 in base 10.
+\begin{itemize}
+\item ${110110}_{c2}$
+\item ${010011}_{c2}$
+\item ${11110001}_{c2}$
+\end{itemize}
+
+\subsection*{Esercizio 6}
+Si convertano i seguenti numeri binari espressi con eccesso N in base 10.
+\begin{itemize}
+\item ${010101}_{e128}$
+\item ${1101}_{e16}$
+\item ${111100010}_{e64}$
+\end{itemize}
+
+\section*{Circuiti logici e algebra di Boole}
+\subsection*{Esercizio 7}
+Date le seguenti espressioni, si determinino le rispettive rappresentazioni grafiche e le relative tabelle di verità.
+\begin{itemize}
+\item $\neg((x \land y) \lor (\neg y \land z))$
+\item $(\neg((x \xor y) \land \neg w)) \land (w \lor z)$
+\item $\neg((\neg (\neg x \land y) \xor \neg y) \land (\neg(w \lor z)))$
+
+\end{itemize}
+
+\subsection*{Esercizio 8}
+Utilizzando i teoremi dell'algebra di Boole e le formule di De Morgan si semplifichi la seguente funzione logica.
+\[
+f = \neg(x \lor (w \land z) \lor (x \land \neg y))
+\]
+
+\subsection*{Esercizio 9}
+Si progetti un circuito combinatorio che, dati 4 ingressi, unicamente con porte a due ingressi, restituisca 1 solamente nel caso in cui la stringa inserita sia uguale a 1001.
+
+\subsection*{Esercizio 10}
+Si progetti un circuito combinatorio che, dati 4 ingressi, e con sole porte a due ingressi, restituisca 1 solamente nel caso in cui la stringa inserita sia un palindromo (la stringa può essere letta in entrambi i versi).
+
+\subsection*{Esercizio 11}
+Si progetti un circuito combinatorio in grado di simulare il funzionamento di una lampadina comandata da tre diversi interruttori. I tre ingressi rappresentano lo stato degli interruttori mentre l’uscita rappresenta lo stato della lampadina. Il circuito deve soddisfare la condizione che ogni modifica allo stato di uno degli interruttori comporta una modifica dello stato della lampadina. Il circuito è normalmente spento ovvero, all'ingresso 000 l'uscita vale 0.
+
+\section*{Multiplexer e latch}
+\subsection*{Esercizio 12}
+Si progetti un circuito che, utilizzando dei gated D latch, sia in grado di memorizzare due bit distinti. Deve inoltre essere possibile scegliere quale dei due bit mostrare come output del circuito completo.
+
+\end{document}
