@@ -1,0 +1,61 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage[T1]{fontenc}
+
+\def\code#1{\texttt{#1}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Tutorato 2}
+\chead{Architetture degli Elaboratori e Sistemi Operativi}
+\rhead{\today}
+\cfoot{\thepage}
+
+\begin{document}
+\section*{Assembly}
+\subsection*{Esercizio 1}
+Si scriva un programma assembly che, tramite una subroutine, esegua la divisione intera tra due valori restituendo quoziente e resto, rispettivamente in $R0$ e $R1$.
+
+\subsection*{Esercizio 2}
+Si scriva un programma assembly che calcoli la funzione di fibonacci, il cui algoritmo non ricorsivo è implementato in una subroutine, restituendo $f(R0)$ in $R0$.
+
+\section*{Shell Unix}
+\subsection*{Esercizio 3}
+Si descriva l'effetto dell'esecuzione sequenziale dei seguenti comandi, motivando la risposta.
+\newline
+\code{
+> cd\\
+> mkdir ex3\\
+> chmod 444 ex3\\
+> cd ex2
+}
+
+\subsection*{Esercizio 4}
+Si eseguano le seguenti operazioni:
+\begin{enumerate}
+\item Creare una directory denominata \code{tut3}
+\item Cambiare i permessi della suddetta directory in modo tale che il proprietario possa fare tutto, il gruppo possa leggere e scrivere mentre il resto del mondo possa solamente leggere
+\item Creare un file all'interno della directory denominato \code{ex4.txt}
+\item Scrivere nel file alcune righe di testo
+\item Stampare il numero di caratteri presenti nel file
+\item Eliminare l'intera cartella
+\end{enumerate}
+
+\subsection*{Esercizio 5}
+Si eseguano le seguenti operazioni:
+\begin{enumerate}
+\item Creare un file denominato \code{ex5.txt}
+\item I permessi di questo file dovranno essere \code{rwe} per il proprietario e nessuno per gruppo e resto del mondo
+\item Riempire tale file con la lista dei filenames (compresi i files che iniziano con \code{.}) presenti in una directory a scelta.
+\end{enumerate}
+
+\subsection*{Esercizio 6}
+\code{grep} è un comando filtro che ricerca nel file di testo specificato le linee che corrispondono ad un dato pattern (espressioni regolari o stringhe letterali), e produce un elenco delle corrispondenze.\\
+
+Si salvi l'elenco di tutti i file con estensione \code{pdf} con i relativi permessi e ordinati rispetto alla data di modifica, selezionando solamente quelli creati nel mese di aprile in un file di testo denominato \code{ex6.txt} (creato in una directory diversa da quella corrente).
+
+\end{document}
