@@ -1,7 +1,6 @@
                MOV     R0, #111 ; a
                MOV     R1, #21 ; b
                BL      division ; chiamata subroutine
-               MOV     R11, #99
                END
 
 division       
