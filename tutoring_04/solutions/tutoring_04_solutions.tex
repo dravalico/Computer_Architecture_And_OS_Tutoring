@@ -1,0 +1,59 @@
+\documentclass{article}
+\usepackage[utf8]{inputenc}
+\usepackage{geometry}
+\usepackage{fancyhdr}
+\usepackage{amssymb}
+\usepackage{listings}
+\usepackage[T1]{fontenc}
+
+\def\code#1{\texttt{#1}}
+\newcommand\tab[1][0.4cm]{\hspace*{#1}}
+
+\pagestyle{fancy}
+\fancyhf{}
+\lhead{Tutorato 4}
+\chead{Architetture degli Elaboratori e Sistemi Operativi}
+\rhead{\today}
+\cfoot{\thepage}
+
+\begin{document}
+
+\section*{Assembly}
+\subsection*{Esercizio 1}
+Si veda \code{assembly/esercizio01\_solution.s}
+
+\subsection*{Esercizio 2}
+Si veda \code{assembly/esercizio02\_solution.s}
+
+\section*{Shell Unix}
+\subsection*{Esercizio 3}
+Tramite questi comandi viene creata una nuova cartella i cui permessi, per ciascuna categoria, sono impostati a \code{4} che corrisponde a "sola lettura". Quando si cercherà quindi di accedervi tramite \code{cd}, non avendo i permessi, l'operazione avrà esito negativo.
+
+\subsection*{Esercizio 4}
+\code{> mkdir tut3\\
+> chmod 764 tut3\\
+> cd tut3\\
+> touch ex4.txt\\
+> vi ex4.txt\\
+> queste sono\\
+\tab alcune righe\\
+\tab di prova\\
+press esc\\
+:wq\\
+press enter\\
+> wc -m ex4.txt\\
+> cd ..\\
+> rm -r tut3
+}
+
+\subsection*{Esercizio 5}
+\code{> touch ex5.txt\\
+> chmod 700 ex5.txt\\
+> ls -a . > ex5.txt
+}
+
+\subsection*{Esercizio 6}
+\code{> touch ./Documents/ex6.txt\\
+> ls -lt *.pdf | grep Apr > ./Documents/ex6.txt}
+
+\end{document}
