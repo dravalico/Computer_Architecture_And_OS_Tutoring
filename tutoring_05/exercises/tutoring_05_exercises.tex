@@ -18,7 +18,7 @@
 \begin{document}
 \section*{C - Comunicazione tra processi}
 \subsection*{Esercizio 1}
-Si scriva un programma C in cui, dato un vettore di interi, il processo padre genera due processi figli; il primo calcolerà il valore massimo e lo stamperà su stdout, il secondo calcolerà il valore minimo e lo stamperà su stdout. Il processo padre invece calcolerà il valore medio stampandolo su stdout; prima di terminare attenderà che entrambi i processi figli abbiano concluso l'esecuzione.
+Si scriva un programma C in cui, dato un vettore di interi, il processo padre genera due processi figli; il primo calcolerà il valore massimo e lo stamperà su stdout, il secondo calcolerà il valore minimo e lo stamperà su stdout. Il processo padre invece attenderà che entrambi i processi figli abbiano concluso l'esecuzione e successivamente calcolerà il valore medio stampandolo su stdout.
 
 \subsection*{Esercizio 2}
 Si scriva un programma C che abbia due processi, parent e child. Il processo padre esegue per $N$ volte il seguente ciclo:
