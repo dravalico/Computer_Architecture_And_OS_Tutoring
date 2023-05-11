@@ -1,6 +1,7 @@
 #include <stdio.h>
 #include <stdlib.h>
 #include <unistd.h>
+#include <sys/wait.h>
 
 #define N 10
 
@@ -35,10 +36,7 @@ int main() {
             printf("[Child2 -> %d] Min value is %d\n", getpid(), min_value);
             exit(0);
         } else {
-            if (wait(&pid_a) == -1 || wait(&pid_b) == -1) {
-                perror("wait()");
-                exit(1);
-            }
+            while (wait(NULL) != -1);
             double mean_value = 0;
             for (int i = 0; i < N; i++) {
                 mean_value = mean_value + array[i];
